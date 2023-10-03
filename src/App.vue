@@ -7,7 +7,11 @@ import HelloWorld from "./components/HelloWorld.vue";
     <router-link to="/">Home</router-link>
     <router-link to="/about">About</router-link>
     <router-view v-slot="{ Component }">
-      <transition name="fade" mode="out-in">
+      <transition
+        enter-active-class="animate__animated animate__fadeInLeft"
+        leave-active-class="animate__animated animate__fadeOutLeft"
+        mode="out-in"
+      >
         <component :is="Component" />
       </transition>
     </router-view>
