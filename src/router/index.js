@@ -8,10 +8,18 @@ const router = createRouter({
         {
             path: '/',
             component: Home,
+            meta: {
+                enterClass: "animate__animated animate__fadeInLeft",
+                leaveClass: "animate__animated animate__fadeOutLeft",
+            }
         },
         {
             path: '/about',
             component: About,
+            meta: {
+                enterClass: "animate__animated animate__bounce",
+                leaveClass: "animate__animated animate__fadeOutLeft",
+            }
         },
     ]
 })

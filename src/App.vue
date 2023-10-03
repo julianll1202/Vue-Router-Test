@@ -6,10 +6,10 @@ import HelloWorld from "./components/HelloWorld.vue";
   <div class="content">
     <router-link to="/">Home</router-link>
     <router-link to="/about">About</router-link>
-    <router-view v-slot="{ Component }">
+    <router-view v-slot="{ Component, route }">
       <transition
-        enter-active-class="animate__animated animate__fadeInLeft"
-        leave-active-class="animate__animated animate__fadeOutLeft"
+        :enter-active-class="route.meta.enterClass"
+        :leave-active-class="route.meta.leaveClass"
         mode="out-in"
       >
         <component :is="Component" />
